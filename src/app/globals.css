@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --surface: #ffffff;
+  --surface-alt: #f3f4ec;
+  --paper: #fbfbf7;
+  --sage: #e4e8d3;
+  --line: #e6e8df;
+  --ink: #1d2b22;
+  --muted: #5d675f;
+  --heading: #1b3426;
+  --olive: #546b2a;
+}
+
+.dark {
+  color-scheme: dark;
+  --surface: #131f18;
+  --surface-alt: #0f1913;
+  --paper: #1a2a21;
+  --sage: #2b3d2e;
+  --line: #2a3b30;
+  --ink: #e4ebdf;
+  --muted: #a4b0a6;
+  --heading: #f0f5ea;
+  --olive: #93b45c;
+}
+
+@theme inline {
+  --color-surface: var(--surface);
+  --color-surface-alt: var(--surface-alt);
+  --color-paper: var(--paper);
+  --color-sage: var(--sage);
+  --color-line: var(--line);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-heading: var(--heading);
+  --color-olive: var(--olive);
+
+  --color-forest: #1b3426;
+  --color-forest-deep: #183024;
+  --color-moss: #3f5a2e;
+
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-source-serif);
+  --font-script: var(--font-caveat);
+  --font-arabic: var(--font-aref);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--surface);
+  color: var(--ink);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+:focus-visible {
+  outline: 2px solid var(--olive);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+/* ---------- Motion ---------- */
+
+/* Cards glide with transform only; the shadow fades in on its own layer. */
+.lift {
+  position: relative;
+  transition: transform 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+  backface-visibility: hidden;
+}
+
+.lift::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow: 0 16px 34px rgba(27, 52, 38, 0.15);
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.dark .lift::after {
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.45);
+}
+
+@media (hover: hover) {
+  .lift:hover {
+    transform: translateY(-4px);
+  }
+
+  .lift:hover::after {
+    opacity: 1;
+  }
+}
