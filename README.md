@@ -11,7 +11,7 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS_4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
 
-**Live URL:** _add your Vercel URL here after deploying_
+**Live URL:** https://healthify-alpha.vercel.app/
 
 </div>
 
@@ -167,15 +167,3 @@ npm run build
 npm run start
 ```
 
-### Environment variables
-None are needed. The site has no backend, API keys or secrets. If you add any later, put the names in a `.env.example` file, keep real values in `.env.local` (already git-ignored), and set them in Vercel under **Project Settings → Environment Variables**.
-
----
-
-## Deployment
-
-1. Push the repository to GitHub.
-2. Import it in [Vercel](https://vercel.com/new). The Next.js preset is detected automatically.
-3. Click **Deploy**, then paste the live URL at the top of this README.
-
-Every push to the main branch redeploys automatically.
