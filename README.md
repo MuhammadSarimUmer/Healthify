@@ -70,7 +70,7 @@ Healthify is a single-page marketing site for a meal-plan delivery brand. The pa
 | **ESLint (`eslint-config-next`)** | Linting |
 
 ### Design notes
-- **Theming:** CSS variables in `:root` and `.dark` are mapped to Tailwind colour tokens. A small inline script in `<head>` applies the saved or system theme before first paint, so there is no flash.
+- **Theming:** CSS variables in `:root` and `.dark` are mapped to Tailwind colour tokens. A small inline script in `<head>` applies the saved theme before first paint (light is the default), so there is no flash.
 - **Motion:** Only hover and press effects. Buttons lift slightly, and cards glide up with a soft shadow. These use transform and opacity only so they stay smooth. `prefers-reduced-motion` is respected.
 - **Accessibility:** Semantic landmarks, `aria` attributes on the accordion and menu, alt text on images, visible focus rings and `role="alert"` on the offline notice.
 - **Content:** All copy, prices, links and lists live in `src/data/content.ts`, so sections stay free of hard-coded text.

@@ -19,7 +19,7 @@ const aref = Aref_Ruqaa({
   weight: ["700"],
 });
 
-const themeInitScript = `(function(){try{var t=localStorage.getItem("theme");var d=t?t==="dark":window.matchMedia("(prefers-color-scheme: dark)").matches;if(d)document.documentElement.classList.add("dark")}catch(e){}})();`;
+const themeInitScript = `(function(){try{var t=localStorage.getItem("theme");if(t==="dark")document.documentElement.classList.add("dark")}catch(e){}})();`;
 
 export const metadata: Metadata = {
   title: "Healthify | Healthy Meals, Happier Lives",
