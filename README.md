@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="public/images/logo-dark.png" alt="Healthify logo" width="220" />
+<img src="public/images/logo-light.png" alt="Healthify logo" width="220" />
 
 # Healthify
 
