@@ -74,7 +74,7 @@ export default function Hero() {
         />
 
         <div
-          className="absolute bottom-5 right-5 sm:right-8 lg:bottom-8 lg:right-[10%]"
+          className="absolute bottom-5 right-5 sm:right-8 lg:bottom-8 lg:right-[3%]"
         >
           <div className="flex items-center gap-4 rounded-2xl bg-surface px-7 py-5 shadow-[0_12px_36px_rgba(27,52,38,0.18)]">
             <Leaf aria-hidden="true" className="size-7 text-olive" strokeWidth={1.4} />
